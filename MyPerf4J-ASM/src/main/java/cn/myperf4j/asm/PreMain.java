@@ -1,5 +1,6 @@
 package cn.myperf4j.asm;
 
+import MyPerf4J.restart.OOMAgent;
 import cn.myperf4j.asm.aop.ProfilingTransformer;
 
 import java.lang.instrument.Instrumentation;
@@ -17,5 +18,6 @@ public final class PreMain {
         if (ASMBootstrap.getInstance().initial()) {
             ins.addTransformer(new ProfilingTransformer());
         }
+        OOMAgent.initial(options, ins);
     }
 }

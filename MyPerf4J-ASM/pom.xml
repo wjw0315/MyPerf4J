@@ -36,6 +36,10 @@
             <artifactId>MyPerf4J-Core</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>MyPerf4J</groupId>
+            <artifactId>module-restart</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -79,6 +83,7 @@
                             <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml</dependencyReducedPomLocation>
                             <minimizeJar>false</minimizeJar>
                             <createSourcesJar>false</createSourcesJar>
+                            <!-- 可选：重命名依赖包以避免冲突 -->
                             <relocations>
                                 <relocation>
                                     <pattern>org.objectweb.asm</pattern>

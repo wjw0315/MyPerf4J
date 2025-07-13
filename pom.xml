@@ -10,6 +10,7 @@
         <module>MyPerf4J-ASM</module>
         <module>MyPerf4J-Base</module>
         <module>MyPerf4J-Benchmark</module>
+        <module>module-restart</module>
     </modules>
     <name>MyPerf4J</name>
 
@@ -56,6 +57,11 @@
                 <groupId>org.openjdk.jmh</groupId>
                 <artifactId>jmh-generator-annprocess</artifactId>
                 <version>${jmh-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>MyPerf4J</groupId>
+                <artifactId>module-restart</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
