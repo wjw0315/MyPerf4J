@@ -104,4 +104,15 @@ public interface PropertyKeys {
 
         ConfigKey SIZE_TIMING_MAP = ConfigKey.of("recorder.size.timing_map", "ProfilingOutThresholdCount");
     }
+
+    interface HealthMonitor {
+
+        ConfigKey RESTART_SCRIPT_PATH = ConfigKey.of("restart.script.path", "RestartScriptPath");
+
+        ConfigKey HEALTH_CHECK_URL = ConfigKey.of("health.check.url", "HealthCheckUrl");
+
+        ConfigKey HEALTH_CHECK_FAIL_THRESHOLD = ConfigKey.of("health.check.fail.threshold", "HealthCheckFailThreshold");
+
+        ConfigKey HEALTH_CHECK_INTERVAL = ConfigKey.of("health.check.interval", "HealthCheckInterval");
+    }
 }

@@ -38,6 +38,7 @@ import java.util.concurrent.TimeUnit;
 
 import static cn.myperf4j.base.config.BasicConfig.loadBasicConfig;
 import static cn.myperf4j.base.config.FilterConfig.loadFilterConfig;
+import static cn.myperf4j.base.config.HealthMonitorConfig.loadHealthMonitorConfig;
 import static cn.myperf4j.base.config.HttpServerConfig.loadHttpServerConfig;
 import static cn.myperf4j.base.config.InfluxDbConfig.loadInfluxDbConfig;
 import static cn.myperf4j.base.config.MetricsConfig.loadMetricsConfig;
@@ -194,6 +195,7 @@ public abstract class AbstractBootstrap {
             ProfilingConfig.filterConfig(loadFilterConfig());
             ProfilingConfig.recorderConfig(loadRecorderConfig());
             ProfilingConfig.httpServerConfig(loadHttpServerConfig());
+            ProfilingConfig.healthMonitorConfig(loadHealthMonitorConfig());
             return true;
         } catch (Exception e) {
             Logger.error("AbstractBootstrap.initProfilingConfig()", e);

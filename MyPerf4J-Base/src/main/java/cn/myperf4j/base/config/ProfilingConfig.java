@@ -17,10 +17,18 @@ public final class ProfilingConfig {
 
     private static RecorderConfig RECORDER_CONFIG;
 
+    private static HealthMonitorConfig HEALTH_MONITOR_CONFIG;
+
     private ProfilingConfig() {
         //empty
     }
 
+    public static HealthMonitorConfig healthMonitorConfig() {
+        return HEALTH_MONITOR_CONFIG;
+    }
+    public static HealthMonitorConfig healthMonitorConfig(HealthMonitorConfig healthMonitorConfig){
+        return HEALTH_MONITOR_CONFIG = healthMonitorConfig;
+    }
     public static BasicConfig basicConfig() {
         return BASIC_CONFIG;
     }
