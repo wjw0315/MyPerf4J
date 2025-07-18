@@ -1,11 +1,14 @@
-package MyPerf4J.restart.utils;
+package cn.MyPerf4J.restart.utils;
 
 import cn.myperf4j.base.util.Logger;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class ScriptUtil {
+public final class ScriptUtil {
+
+    private ScriptUtil() {
+    }
     /**
      * 执行外部脚本
      * @param scriptPath

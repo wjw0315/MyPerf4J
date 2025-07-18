@@ -1,6 +1,6 @@
 package cn.myperf4j.asm;
 
-import MyPerf4J.restart.OOMAgent;
+import cn.MyPerf4J.restart.OOMAgent;
 import cn.myperf4j.asm.aop.ProfilingTransformer;
 
 import java.lang.instrument.Instrumentation;

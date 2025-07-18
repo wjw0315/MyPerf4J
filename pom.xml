@@ -17,6 +17,7 @@
     <properties>
         <asm-version>9.7</asm-version>
         <jmh-version>1.37</jmh-version>
+        <hutool.version>5.8.39</hutool.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -62,6 +63,11 @@
                 <groupId>MyPerf4J</groupId>
                 <artifactId>module-restart</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-json</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

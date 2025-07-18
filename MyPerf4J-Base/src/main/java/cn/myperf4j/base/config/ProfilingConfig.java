@@ -26,7 +26,8 @@ public final class ProfilingConfig {
     public static HealthMonitorConfig healthMonitorConfig() {
         return HEALTH_MONITOR_CONFIG;
     }
-    public static HealthMonitorConfig healthMonitorConfig(HealthMonitorConfig healthMonitorConfig){
+
+    public static HealthMonitorConfig healthMonitorConfig(HealthMonitorConfig healthMonitorConfig) {
         return HEALTH_MONITOR_CONFIG = healthMonitorConfig;
     }
     public static BasicConfig basicConfig() {
