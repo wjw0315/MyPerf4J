@@ -1,5 +1,7 @@
 package cn.MyPerf4J.restart;
 
+import cn.hutool.log.Log;
+import cn.hutool.log.LogFactory;
 import cn.myperf4j.base.config.HealthMonitorConfig;
 import cn.myperf4j.base.config.ProfilingConfig;
 import cn.myperf4j.base.util.Logger;
@@ -16,7 +18,7 @@ public final class OOMAgent {
 //    public static long interval = 5000;
 //    public static int failThreshold = 3; // 新增：失败几次后触发脚本
     private static final HealthMonitorConfig healthMonitorConfig = ProfilingConfig.healthMonitorConfig();
-
+    private static final Log log = LogFactory.get();
     public static void initial(String args, Instrumentation inst) {
 //        if (args != null && !args.isEmpty()) {
 //            scriptPath = args;
@@ -24,10 +26,10 @@ public final class OOMAgent {
 
         // 设置默认的未捕获异常处理器
         Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
-            Logger.error("Uncaught exception in thread '" + thread.getName() + "': " + throwable);
+            log.error("Uncaught exception in thread '" + thread.getName() + "': " + throwable);
 //            System.err.println("Uncaught exception in thread '" + thread.getName() + "': " + throwable);
             if (throwable instanceof OutOfMemoryError) {
-                Logger.error("JVM OutOfMemoryError detected!");
+                log.error("JVM OutOfMemoryError detected!");
 //                System.err.println("JVM OutOfMemoryError detected!");
 //                ScriptUtil.executeScript(scriptPath);
             }
